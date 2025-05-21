@@ -1,0 +1,6 @@
+*
+!/modules
+/modules/*
+!/modules/demosymfonyformsimple
+!/modules/mymodule
+!/.gitignore
