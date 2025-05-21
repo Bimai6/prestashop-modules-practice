@@ -2,5 +2,7 @@
 !/modules
 /modules/*
 !/modules/demosymfonyformsimple
+!/modules/demosymfonyformsimple/*
 !/modules/mymodule
+!/modules/mymodule/*
 !/.gitignore
