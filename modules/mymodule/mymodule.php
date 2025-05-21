@@ -21,7 +21,7 @@ class MyModule extends Module
         parent::__construct();
 
         $this->displayName = $this->trans('My module', [], 'Modules.Mymodule.Admin');
-        $this->description = $this->trans('Description of my module dd.', [], 'Modules.Mymodule.Admin');
+        $this->description = $this->trans('Description of my module.', [], 'Modules.Mymodule.Admin');
 
         $this->confirmUninstall = $this->trans('Are you sure you want to uninstall?', [], 'Modules.Mymodule.Admin');
 
@@ -53,10 +53,13 @@ class MyModule extends Module
 
     public function hookDisplayLeftColumn($params)
     {
-        $this->context->smarty->assign([
-            'my_module_name' => Configuration::get('MYMODULE_NAME'),
-            'my_module_link' => $this->context->link->getModuleLink('mymodule', 'display')
-        ]);
+        $this->context->smarty->assign(
+            [
+                'my_module_name' => Configuration::get('MYMODULE_NAME'),
+                'my_module_link' => $this->context->link->getModuleLink('mymodule', 'display'),
+                'my_module_message' => $this->l('This is a simple text message') // Do not forget to enclose your strings in the l() translation method
+            ]
+        );
 
         return $this->display(__FILE__, 'mymodule.tpl');
     }

@@ -3,6 +3,14 @@
 /modules/*
 !/modules/demosymfonyformsimple
 !/modules/demosymfonyformsimple/*
+!/modules/demosymfonyformsimple/*/*
+!/modules/demosymfonyformsimple/*/*/*
+!/modules/demosymfonyformsimple/*/*/*/*
+/modules/demosymfonyformsimple/vendor
+/modules/demosymfonyformsimple/vendor/*
 !/modules/mymodule
 !/modules/mymodule/*
+!/modules/mymodule/*/*
+!/modules/mymodule/*/*/*
+!/modules/mymodule/*/*/*/*
 !/.gitignore
