@@ -41,6 +41,7 @@ class MyModule extends Module
             $this->registerHook('actionFrontControllerSetMedia') &&
             $this->registerHook('displayRightColumn') &&
             $this->registerHook('displayBanner') &&
+            $this->registerHook('displayFooter') &&
             Configuration::updateValue('MYMODULE_NAME', 'my module');
     }
 
@@ -72,6 +73,19 @@ class MyModule extends Module
     public function hookDisplayRightColumn($params)
     {
         return $this->hookDisplayLeftColumn($params);
+    }
+
+    public function hookDisplayFooter($params)
+    {
+        $items = [
+            'Productos' => ['Ofertas', 'Novedades'],
+            'Nuestra Empresa' => ['Envío', 'Aviso legal', 'Sobre nosotros'],
+            'Su cuenta' => ['Iniciar sesión', 'Crear cuenta'],
+            'Información de la cuenta' => ['Tienda de ejemplo', 'España']
+        ];
+
+        $this->context->smarty->assign('items', $items);
+        return $this->display(__FILE__, '/views/templates/hook/displayFooter.tpl');
     }
 
     public function hookActionFrontControllerSetMedia()
