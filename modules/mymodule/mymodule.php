@@ -40,6 +40,7 @@ class MyModule extends Module
             $this->registerHook('displayLeftColumn') &&
             $this->registerHook('actionFrontControllerSetMedia') &&
             $this->registerHook('displayRightColumn') &&
+            $this->registerHook('displayBanner') &&
             Configuration::updateValue('MYMODULE_NAME', 'my module');
     }
 
@@ -49,6 +50,10 @@ class MyModule extends Module
             parent::uninstall() 
             && Configuration::deleteByName('MYMODULE_NAME')
         );
+    }
+
+    public function hookDisplayBanner($params) {
+        return $this->display(__FILE__, 'views/templates/hook/displayBanner.tpl');
     }
 
     public function hookDisplayLeftColumn($params)
