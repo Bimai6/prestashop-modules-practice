@@ -13,4 +13,11 @@
 !/modules/mymodule/*/*
 !/modules/mymodule/*/*/*
 !/modules/mymodule/*/*/*/*
+!/modules/mymodule2
+!/modules/mymodule2/*
+!/modules/mymodule2/*/*
+!/modules/mymodule2/*/*/*
+!/modules/mymodule2/*/*/*/*
+!/tools
+!/tools/guard.php
 !/.gitignore
