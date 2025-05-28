@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use PrestaShop\PrestaShop\Adapter\SymfonyContainer;
+require_once _PS_ROOT_DIR_ . '/tools/guard.php';
 
 class DemoSymfonyFormSimple extends Module
 {

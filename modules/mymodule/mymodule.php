@@ -1,7 +1,5 @@
 <?php
-if (!defined('_PS_VERSION_')) {
-    exit;
-}
+require_once _PS_ROOT_DIR_ . '/tools/guard.php';
 
 class MyModule extends Module
 {
