@@ -18,6 +18,11 @@
 !/modules/mymodule2/*/*
 !/modules/mymodule2/*/*/*
 !/modules/mymodule2/*/*/*/*
+!/modules/serviceexample
+!/modules/serviceexample/*
+!/modules/serviceexample/*/*
+!/modules/serviceexample/*/*/*
+!/modules/serviceexample/*/*/*/*
 !/tools
 !/tools/guard.php
 !/.gitignore
