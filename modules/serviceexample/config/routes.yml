@@ -1,0 +1,7 @@
+serviceexample_demo:
+  path: /serviceexample/demo
+  methods: [GET]
+  defaults:
+    _controller: 'YourCompany\ServiceExample\Controller\DemoController::demoAction'
+    _legacy_controller: serviceexample
+    _legacy_link: AdminServiceExampleDemo

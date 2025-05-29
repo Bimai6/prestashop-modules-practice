@@ -1,0 +1,13 @@
+# yourmodule/config/services.yml
+services:
+  _defaults:
+    public: true
+
+  your_company.your_module.your_service:
+    class: YourCompany\ServiceExample\FirstService
+    arguments:
+      - "@translator"
+      - "My custom message"
+
+  imports:
+    - { resource: services.php }
